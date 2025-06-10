@@ -1,14 +1,18 @@
 import { Link, useParams } from "react-router";
+
 function CharacterDetail({ characters }) {
   const { nameCharacter } = useParams();
-  const characterFound = characters.find(
-    (eachCharacter) => eachCharacter.name === nameCharacter
-  );
-  const { name, alive, species, actor, house } = characterFound;
+  const characterFound = characters.find((c) => c.name === nameCharacter);
 
+  if (!characterFound) {
+    return <p className="noResults">This character does not exist</p>;
+  }
   return (
     <>
       <h2>Details of {characterFound.name}</h2>
+      <Link to="/" className="btn link">
+        Return
+      </Link>
       <div className="detail">
         <img
           className="characterImage"
@@ -23,7 +27,10 @@ function CharacterDetail({ characters }) {
             <dt>Name:{characterFound.name}</dt>
           </dl>
           <dl>
-            <dt>Status:{characterFound.alive}</dt>
+            <dt>
+              Status:{characterFound.alive ? "Alive" : "Deceased"}
+              {characterFound.status && ` (${characterFound.status})`}
+            </dt>
           </dl>
           <dl>
             <dt>Species:{characterFound.species}</dt>
@@ -36,11 +43,7 @@ function CharacterDetail({ characters }) {
           </dl>
         </div>
       </div>
-      <div>
-        <Link to="/" className="btn link">
-          Return
-        </Link>
-      </div>
+      <div></div>
     </>
   );
 }

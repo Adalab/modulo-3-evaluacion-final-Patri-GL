@@ -16,7 +16,8 @@ function App() {
   const [selectHouse, setSelectHouse] = useState("");
 
   useEffect(() => {
-    if (characters.length === 0) {
+    const savedCharacters = ls.get("characters");
+    if (!savedCharacters || savedCharacters.length === 0) {
       fetchCharacters().then((data) => {
         setCharacters(data);
         ls.set("characters", data);
