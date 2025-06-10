@@ -6,6 +6,10 @@
 
 - [@Patri-GL](https://github.com/Patri-GL)
 
+## Project
+
+- [Backlog](https://github.com/orgs/Adalab/projects/523/views/1?system_template=team_planning)
+
 ## License
 
 MIT License
