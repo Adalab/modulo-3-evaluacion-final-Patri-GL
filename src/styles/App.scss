@@ -1,3 +1,103 @@
-@use './core/reset';
+@use "./core/reset";
 
 /* Aquí van los estilos */
+
+:root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(129, 125, 125);
+}
+
+.header {
+  font-family: "Harry Potter", sans-serif;
+  font-size: 3rem;
+  color: rgb(17, 11, 11);
+  text-align: center;
+  margin-block: 2rem;
+}
+
+.main {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardContainer {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.card {
+  padding: 0.5rem 1rem;
+  background-color: rgb(131, 106, 43);
+  text-align: center;
+  display: flex;
+  width: 15rem;
+  max-height: 60rem;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.characterImage {
+  max-width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+input,
+select {
+  background-color: transparent;
+  border: rgb(131, 106, 43) solid;
+  color: black;
+
+  font-size: 20px;
+  width: 30ch;
+}
+
+.noResults {
+  color: rgb(156, 16, 16);
+  font-weight: bolder;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  background-color: rgb(131, 106, 43);
+  text-align: center;
+  display: flex;
+  width: 30rem;
+  max-height: 60rem;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.resetBtn {
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  background-color: rgb(131, 106, 43);
+  display: flex;
+  width: 15rem;
+  height: 4rem;
+  flex-direction: column;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  border-radius: 1rem;
+  text-align: center;
+  justify-content: center;
+}
