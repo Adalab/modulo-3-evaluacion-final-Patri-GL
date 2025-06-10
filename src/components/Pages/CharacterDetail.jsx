@@ -1,4 +1,6 @@
 import { Link, useParams } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeartPulse, faSkull } from "@fortawesome/free-solid-svg-icons";
 
 function CharacterDetail({ characters }) {
   const { nameCharacter } = useParams();
@@ -24,22 +26,35 @@ function CharacterDetail({ characters }) {
         />
         <div className="detailData">
           <dl>
-            <dt>Name:{characterFound.name}</dt>
+            <dt>Name: {characterFound.name}</dt>
           </dl>
           <dl>
             <dt>
-              Status:{characterFound.alive ? "Alive" : "Deceased"}
+              Status:{" "}
+              {characterFound.alive ? (
+                <>
+                  <FontAwesomeIcon icon={faHeartPulse} />
+                  Alive
+                </>
+              ) : (
+                <>
+                  <FontAwesomeIcon icon={faSkull} /> Deceased
+                </>
+              )}
               {characterFound.status && ` (${characterFound.status})`}
             </dt>
           </dl>
           <dl>
-            <dt>Species:{characterFound.species}</dt>
+            <dt>Species: {characterFound.species}</dt>
           </dl>
           <dl>
-            <dt>Actor:{characterFound.actor}</dt>
+            <dt>Actor: {characterFound.actor}</dt>
           </dl>
           <dl>
-            <dt>House:{characterFound.house}</dt>
+            <dt>
+              House:
+              {characterFound.house}
+            </dt>
           </dl>
         </div>
       </div>

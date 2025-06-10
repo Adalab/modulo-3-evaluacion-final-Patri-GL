@@ -34,8 +34,10 @@ function App() {
   const handleSelectFilter = (ev) => {
     setSelectHouse(ev.target.value);
   };
-
-  const filteredCharacters = characters
+  const sortedCharacters = [...characters].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+  const filteredCharacters = sortedCharacters
     .filter((eachCharacter) =>
       (eachCharacter.name || "")
         .toLowerCase()
@@ -50,7 +52,6 @@ function App() {
       (eachCharacter) =>
         selectHouse === "" || (eachCharacter.house || "").includes(selectHouse)
     );
-
   const handleReset = () => {
     setFilterName("");
     setFilterActor("");
