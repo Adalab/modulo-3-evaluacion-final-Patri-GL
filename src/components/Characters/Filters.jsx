@@ -30,7 +30,7 @@ function Filters(props) {
         <option value="Hufflepuff">Hufflepuff</option>
         <option value="Ravenclaw">Ravenclaw</option>
       </select>
-      <button className="resetBtn" type="button" onClick={props.handleReset}>
+      <button className="btn" type="button" onClick={props.handleReset}>
         Reset
       </button>
     </form>

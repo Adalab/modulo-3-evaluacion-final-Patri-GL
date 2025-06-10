@@ -1,7 +1,12 @@
+import { Link } from "react-router";
+
 function CharacterCard({ character, index }) {
   return (
-    <>
-      <li key={character.id || index} className="cardContainer">
+    <Link
+      to={"/characterDetail/" + character.name}
+      className=" cardContainer link"
+    >
+      <li key={character.id || index}>
         <figure className="card">
           <img
             className="characterImage"
@@ -18,7 +23,7 @@ function CharacterCard({ character, index }) {
           </figcaption>
         </figure>
       </li>
-    </>
+    </Link>
   );
 }
 
