@@ -3,6 +3,7 @@ function Filters(props) {
     <form className="form" onSubmit={(ev) => ev.preventDefault()}>
       <label htmlFor="name">Search for a character:</label>
       <input
+        className="formItems"
         onInput={props.handleInputFilter}
         value={props.filterName}
         type="text"
@@ -11,6 +12,7 @@ function Filters(props) {
       />
       <label htmlFor="actor">Search by actor:</label>
       <input
+        className="formItems"
         onInput={props.handleActorFilter}
         value={props.filterActor}
         type="text"
@@ -19,6 +21,7 @@ function Filters(props) {
       />
       <label htmlFor="house">Select a house:</label>
       <select
+        className="formItems"
         onChange={props.handleSelectFilter}
         value={props.selectHouse}
         name="house"

@@ -2,10 +2,7 @@ import { Link } from "react-router";
 
 function CharacterCard({ character, index }) {
   return (
-    <Link
-      to={"/characterDetail/" + character.name}
-      className=" cardContainer link"
-    >
+    <Link className="cardContainer" to={"/characterDetail/" + character.name}>
       <li key={character.id || index}>
         <figure className="card">
           <img
