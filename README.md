@@ -1,4 +1,4 @@
-# Anime Shows Search site
+# Harry Potter Characters site
 
 [Harry Potter Characters](http://beta.adalab.es/modulo-3-evaluacion-final-Patri-GL/) website has been created as an evaluation exercise of module 3 within the [Adalab](https://adalab.es/) context of the Web Programming Intensive Bootcamp.
 
